@@ -1,0 +1,70 @@
+/* imported fonts */
+
+@font-face {
+    font-family: 'cooper_hewittbold';
+    src: url('cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cooper_hewittlight';
+    src: url('cooperhewitt-light-webfont.woff2') format('woff2'),
+         url('cooperhewitt-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cooper_hewittthin';
+    src: url('cooperhewitt-thin-webfont.woff2') format('woff2'),
+         url('cooperhewitt-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Variables */
+
+:root {
+    /* colors */
+
+    --background-color: #A6CBBE;
+    --nav-color: none;
+    --nav-text-color: #738A90;
+    --main-title-color: #333333;
+    --secondary-title-color: #333333;
+    --third-title-color: #333333;
+    --fourth-title-color: #4B4D52;
+    --main-text-color: #738A90;
+
+    /* fonts */
+
+    --nav-font: 'cooper_hewittthin', arial, sans-serif;
+    --main-title-font: 'cooper_hewittthin', arial, sans-serif;
+    --secondary-title-font: 'cooper_hewittthin', arial, sans-serif;
+    --third-title-font: 'cooper_hewittthin', arial, sans-serif;
+    --fourth-title-font: 'cooper_hewittthin', arial, sans-serif;
+    --main-text-font: 'cooper_hewittthin', arial, sans-serif;
+
+
+    /* sizes */
+
+    --main-title-size: 16pt;
+    --nav-text-size: --main-title-size;
+    --secondary-title-size: calc(var(--nav-text-size)*4);
+    --third-title-size: calc(var(--nav-text-size)*2);
+    --fourth-title-size: --main-title-size;
+    --main-text-size: --main-title-size;
+
+    /* spacing */
+
+    --spacing: 8px;
+    --spacing-2: calc(var(--spacing)*2);
+    --spacing-4: calc(var(--spacing)*4);
+
+}
