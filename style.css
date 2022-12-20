@@ -314,7 +314,7 @@ nav {
 }
 
 .socialmedia .medialogo a{
-    margin -left:  var(--spacing-4);
+    margin-left:  var(--spacing-4);
     margin-right:  var(--spacing-4);
 }
 .socialmedia .medialogo a img{
