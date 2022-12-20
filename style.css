@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'cooper_hewittbold';
-    src: url('cooperhewitt-bold-webfont.woff2') format('woff2'),
-         url('cooperhewitt-bold-webfont.woff') format('woff');
+    src: url('/font/cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('/font/cooperhewitt-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: 'cooper_hewittlight';
-    src: url('cooperhewitt-light-webfont.woff2') format('woff2'),
-         url('cooperhewitt-light-webfont.woff') format('woff');
+    src: url('/font/cooperhewitt-light-webfont.woff2') format('woff2'),
+         url('/font/cooperhewitt-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -20,9 +20,9 @@
 
 @font-face {
     font-family: 'cooper_hewittthin';
-    src: url('cooperhewitt-thin-webfont.woff2') format('woff2'),
-         url('cooperhewitt-thin-webfont.woff') format('woff');
-    font-weight: normal;
+    src: url('/font/cooperhewitt-thin-webfont.woff2') format('woff2'),
+         url('/font/cooperhewitt-thin-webfont.woff') format('woff');
+    font-weight: lighter;
     font-style: normal;
 
 }
@@ -31,13 +31,15 @@
 /* Variables */
 
 :root {
+    
     /* colors */
 
     --background-color: #A6CBBE;
-    --nav-color: none;
+    --nav-color: transparent;
     --nav-text-color: #738A90;
-    --main-title-color: #333333;
-    --secondary-title-color: #333333;
+    --nav-text-color-hover: #fff;
+    --main-title-color: #A6CBBE;
+    --secondary-title-color: #A6CBBE;
     --third-title-color: #333333;
     --fourth-title-color: #4B4D52;
     --main-text-color: #738A90;
@@ -46,7 +48,7 @@
 
     --nav-font: 'cooper_hewittthin', arial, sans-serif;
     --main-title-font: 'cooper_hewittthin', arial, sans-serif;
-    --secondary-title-font: 'cooper_hewittthin', arial, sans-serif;
+    --secondary-title-font: 'cooper_hewittlight', arial, sans-serif;
     --third-title-font: 'cooper_hewittthin', arial, sans-serif;
     --fourth-title-font: 'cooper_hewittthin', arial, sans-serif;
     --main-text-font: 'cooper_hewittthin', arial, sans-serif;
@@ -55,7 +57,7 @@
     /* sizes */
 
     --main-title-size: 16pt;
-    --nav-text-size: --main-title-size;
+    --nav-text-size: 16pt;
     --secondary-title-size: calc(var(--nav-text-size)*4);
     --third-title-size: calc(var(--nav-text-size)*2);
     --fourth-title-size: --main-title-size;
@@ -67,4 +69,255 @@
     --spacing-2: calc(var(--spacing)*2);
     --spacing-4: calc(var(--spacing)*4);
 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: var(--nav-color);
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.42, 0, 0.14, 1.01);
+}
+
+.nav-logo {
+    display: block;
+    height: 80px;
+    margin-left: 20px;
+    z-index: 4;
+}
+
+.navlink-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    z-index: 1;
+    position: fixed;
+    right: -75vw;    
+    transition: all 1.5s cubic-bezier(0.42, 0, 0.14, 1.01);
+}
+
+.menu li a {
+    font-size: 30px;
+    transition: 350ms;
+    color: var(--nav-text-color);
+    font-family: var(--nav-font);
+    font-size: var(--nav-text-size);
+    letter-spacing: 10px;
+
+}
+
+.menu li a:hover {
+    color: var(--nav-text-color-hover);
+    text-shadow: 0px 20px 5px var(--nav-text-color-hover);
+}
+
+.burger-menu {
+    position: relative;
+    width: 26px;
+    height: 4px;
+    right: 10px;
+    background-color: var(--nav-text-color);
+    border-radius: 8px;
+    z-index: 2;
+    transition: all 250ms cubic-bezier(0.42, 0, 0.14, 1.01);
+}
+
+.burger-menu:before,
+.burger-menu:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background-color: var(--nav-text-color);
+    border-radius: 8px;
+    transition: all 250ms cubic-bezier(0.42, 0, 0.14, 1.01);
+}
+
+.burger-menu:before {
+    top: -10px;
+    width: 26px;
+}
+
+.burger-menu:after {
+    top: 10px;
+    width: 26px;
+}
+
+.toggle-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    right: 10px;
+    top: 24px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* animation de la croix, disparition de la barre du milieu */
+
+.navlink-container input:checked ~ .burger-menu {
+    background-color: transparent;
+}
+
+.navlink-container input:checked ~ .burger-menu:before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.navlink-container input:checked ~ .burger-menu:after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.navlink-container input:checked ~ .menu {
+    right: 0;    
+}
+
+.burger-menu, .toggle-btn {
+    display: block;    
+}
+
+.videozone {
+    width: 100vw;
+    top: -80px;
+    z-index: -10;
+    position: relative;
+}
+
+.h1home {
+    color: var(--main-title-color);
+    font-family: var(--main-title-font);
+    font-size: var(--main-title-size);
+    position: absolute;
+    top: 48vh;
+    left: 50px;
+}
+
+.grapher, .dev, .cgi {
+    color: var(--secondary-title-color);
+    font-family: var(--secondary-title-font);
+    font-size: var(--secondary-title-size);
+    position: absolute;
+    top: 50vh;
+    left: 50px;
+}
+
+.grapher {
+    animation: grapher 15s infinite;
+}
+.dev {
+    animation: dev 15s infinite;
+}
+.cgi {
+    animation: cgi 15s infinite;
+}
+
+@keyframes grapher {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    8% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    28% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    33%{
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes dev {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    43% {
+        opacity: 1;
+        filter: blur(0px);        
+    }
+    60%{
+        opacity: 1;
+        filter: blur(0px);
+    }
+    65% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes cgi {
+    0% {
+        opacity: 0;
+        
+    }
+    65% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    70% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    90%{
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: -80px;
+    right: 0;
+}
+
+.socialmedia .medialogo a{
+    margin -left:  var(--spacing-4);
+    margin-right:  var(--spacing-4);
+}
+.socialmedia .medialogo a img{
+    width: var(--spacing-4);
+    height: var(--spacing-4);
 }
