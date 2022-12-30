@@ -566,21 +566,3 @@ p, .softlogos {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 }
-
-.wrapper {
-    grid-column: span 2;
-    grid-row: 4 / 5;
-    display: flex;
-    overflow-x: auto;
-    cursor: grab;
-    z-index: 20;
-}
-
-.wrapper::-webkit-scrollbar{
-    background-color: #33aa ;
-    width: 50px;
-    height: 60px;
-    z-index: -20;
-}
-
-
