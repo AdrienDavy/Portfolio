@@ -158,7 +158,6 @@ nav {
 
 .menu{
     display: flex;
-    /* display: none; */
     justify-content: space-around;
     align-items: center;
     width: 80vw;
@@ -248,21 +247,24 @@ nav {
 
 .navlink-container input:checked ~ .menu {
     right: 0;
-    /* display: flex;
-    transform: translateX(-5vw);  */
 }
 
 .burger-menu, .toggle-btn {
     display: block;    
 }
 
+/* VIDEO BACKGROUND */
+
 .videozone {
     display: flex;
-    justify-content: center;
     top: -80px;
     z-index: -10;
     position: relative;
     background-color: #0B8ABD;
+}
+
+.videozone video{
+    width: 100%;
 }
 
 .h1home {
@@ -367,8 +369,8 @@ nav {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    top: -80px;
-    right: 5vw;
+    top: -70px;
+    right: 2vw;
 }
 
 .socialmedia .medialogo a{
