@@ -1,39 +1,30 @@
-document.body.onload=function(){
-    pictures=10;
-    picturePosition=0;
-    container=document.getElementById("container");
-    leftButton=document.getElementById("leftButton");
-    rightButton=document.getElementById("rightButton");
-    container.style.width=(1600*pictures)+"px";
-    for(i=1;i<=pictures;i++){
-        div=document.createElement("div");
-        div.className="photo";
-        div.style.backgroundImage="url('img/img"+i+".jpg')";
-        container.appendChild(div);
-    }
-    afficherMasquer();
+let card=document.querySelectorAll(".card");
+let arrowLeft=document.querySelector(".arrowLeft");
+let arrowRight=document.querySelector(".arrowRight");
+let slide=document.querySelector(".slide");
+let indice_element_active=1;
+function augmenter(variable){
+    variable.style="z-index:2;transform:scale(1.2);width:40vw;transition: all 0.5s ease;";
 }
-leftButton.addEventListener( "click", ()=>{
-    if(picturePosition>=-pictures+1)
-    picturePosition--;
-    container.style.transform="translate("+picturePosition*1600+"px)";
-    container.style.transition="all 0.5s ease";
-    afficherMasquer();
-})
-rightButton.addEventListener( "click", ()=>{
-    if(picturePosition<0)
-        picturePosition++;
-    container.style.transform="translate("+picturePosition*1600+"px)";
-    container.style.transition="all 0.5s ease";
-    afficherMasquer();
-})
-function afficherMasquer(){
-    if(picturePosition==-pictures+1)
-        leftButton.style.visibility="hidden";
-    else
-        leftButton.style.visibility="visible";
-    if(picturePosition==0)
-        rightButton.style.visibility="hidden";
-    else
-        rightButton.style.visibility="visible";
+function diminuer(variable){
+    variable.style="z-index:1;transform:scale(1);";
 }
+window.onload=()=>{
+    augmenter(card[indice_element_active])
+}
+arrowLeft.addEventListener("click", ()=>{
+    if(indice_element_active !=1) {
+        diminuer(card[indice_element_active]);
+    augmenter(card[indice_element_active-1]);
+    slide.scrollTo(-50 * slide.innerWidth / 100,0);
+    indice_element_active=indice_element_active-1;
+    }    
+})
+arrowRight.addEventListener("click", ()=>{
+    if(indice_element_active !=10) {
+        diminuer(card[indice_element_active]);
+    augmenter(card[indice_element_active+1]);
+    slide.scrollTo(50 * slide.innerWidth / 100,0);
+    indice_element_active=indice_element_active+1;    
+    }    
+})
