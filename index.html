@@ -21,18 +21,19 @@
             </div>
             <div class="navlink-container">
                 <input type="checkbox" class="toggle-btn">
+                <div class="burger-menu"></div>
                 <ul class="menu">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">CGI</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li class="toto"><a href="#">HOME</a></li>
+                    <li class="toto"><a href="#">CGI</a></li>
+                    <li class="toto"><a href="#">VIDEOS</a></li>
+                    <li class="toto"><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-            <div class="burger-menu"></div>
-            <div class="foxprint"><a href="#nav-logo"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="Top page"></a></div>
+        </nav>
+        <div class="foxprint"><a href="#nav-logo"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="Top page"></a></div>
         <div class="foxprinttwo"><a href="#aboutme"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="About me"></a></div>
         <div class="foxprintthree"><a href="#highlights"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="Highlights Projects"></a></div>
-        </nav>
+        
        
 
         <div class="videozone">
@@ -144,20 +145,11 @@
             </p>
 
             <h3 class="titlePictures">SOME PICTURES</h3>
-            <div class="carousel">
-                <ul>
-                    <li class="item"><img src="/img/_MG_7565.jpg" alt="Rails train in the middle of a street"></li>
-                    <li class="item"><img src="/img/_MG_7941.jpg" alt="Small boats"></li>
-                    <li class="item"><img src="/img/_MG_7969b.jpg" alt="3 persons on top of a mountain"></li>
-                    <li class="item"><img src="/img/_MG_7973-HDR.jpg" alt="Sunset on rice fields"></li>
-                    <li class="item"><img src="/img/GOPR3909.jpg" alt="2 puppies"></li>
-                    <li class="item"><img src="/img/IMG_5987.jpg" alt="People in a street"></li>
-                    <li class="item"><img src="/img/IMG_5989.jpg" alt="Entry of a hotel"></li>
-                    <li class="item"><img src="/img/IMG_6043.jpg" alt="A lake with a boat and an small island"></li>
-                    <li class="item"><img src="/img/IMG_6050.jpg" alt="A dragon fruit"></li>
-                    <li class="item"><img src="/img/IMG_6058.jpg" alt="A green plant"></li>
-                    <li class="item"><img src="/img/IMG_7609.jpg" alt="A small village on water"></li>
-                </ul>
+            <div id="carousel">
+                <div id="container">
+                </div>
+                <img src="img/arrow.png" alt="right arrow" class="bouton" id="rightButton">
+                <img src="img/arrow.png" alt="left arrow" class="bouton" id="leftButton">
             </div>
         </section>
 
@@ -204,7 +196,7 @@
             </iframe>
         </section>
 
-        <footer class="footnav">
+        <!-- <footer class="footnav">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">CGI</a></li>
@@ -212,8 +204,9 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <div class="copyright">Adrien Davy©</div>
-        </footer>
+        </footer> -->
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
