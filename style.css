@@ -401,7 +401,6 @@ p, .softlogos {
     align-items: center;
     text-align: justify;
     flex-wrap: wrap;
-    margin: auto 5vw;
 }
 
 .gridaboutme {
@@ -411,6 +410,7 @@ p, .softlogos {
     margin: auto 10vw;
     position: relative;
     top: -50px;
+    margin-bottom: 100px;
 }
 
 .aboutme {
@@ -429,6 +429,7 @@ p, .softlogos {
 }
 
 .one {
+    position: relative;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     text-align: right;
@@ -440,9 +441,8 @@ p, .softlogos {
     background-color: var(--main-title-color);
     border-radius: 10px;
     width: 3px;
-    height: 280px;
-    left: 40%;
-    top: 150px;
+    height: 20vh;
+    left: -300px;
 }
 
 .two {
@@ -453,14 +453,13 @@ p, .softlogos {
 .three {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    padding-left: 50px;
     padding-right: 50px;
 }
 
 .softlogos {
+    position: relative;
     grid-column: 2 / 3;
-    grid-row: 4 / 5;    
-    width: 100%;
+    grid-row: 4 / 5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
@@ -468,8 +467,7 @@ p, .softlogos {
 
 .logo {
     width: 64px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-left: auto;
 }
 
 .softlogos::before {
@@ -478,9 +476,8 @@ p, .softlogos {
     background-color: var(--main-title-color);
     border-radius: 10px;
     width: 3px;
-    height: 280px;
-    left: 50%;
-    top: 620px;
+    height: 20vh;
+    left: 0px;
 }
 
 .four {
@@ -498,6 +495,7 @@ p, .softlogos {
     margin: auto 10vw;
     position: relative;
     top: 0px;
+    margin-bottom: 100px;
 }
 
 .highlights {
@@ -518,22 +516,39 @@ p, .softlogos {
 .titleTemple {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    letter-spacing: 16px;
+    margin-left: 10px;
 }
 
 .titleApril {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     position: absolute;
-    top: 23px;
-    left: 0px;
+    top: 50px;
+    left: 16px;
+    letter-spacing: var(--spacing-2);
 }
 
 .descriptionTemple {
     grid-column: 1 / 2;
     grid-row: 3 / 4;    
-    margin: 5vh 5vw 0 0;
     padding: auto;
     text-align: left;
+    margin-left: 10px;
+}
+
+.gridhighlights iframe{
+    margin-left: auto;
+}
+
+.titleTemple::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-title-color);
+    border-radius: 10px;
+    width: 3px;
+    height: 25vh;
+    left: 0;
 }
 
 /* Flex Grid Travel */
@@ -541,16 +556,16 @@ p, .softlogos {
 .gridtravel {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 360px 50px 600px;
+    grid-template-rows: 200px 360px 200px 600px;
     margin: auto 10vw;
     position: relative;
     top: 0px;
+    margin-bottom: 100px;
 }
 
 .introtravel {
     grid-column: span 2;
     grid-row: 1 / 2;
-    height: 100%;
 }
 
 .titleVietnam, .titleMay, .descriptionVietnam {
@@ -560,17 +575,31 @@ p, .softlogos {
 
 .titleVietnam {
     position: absolute;
-    right: 0px;
+    right: -16px;
+    letter-spacing: var(--spacing-2);
 }
 
 .titleMay {
     position: absolute;
-    top: 23px;
-    right: 0px;
+    top: 50px;
+    right: -16px;
+    letter-spacing: var(--spacing-2);
 }
 
 .descriptionVietnam {
     margin-right: 0;
+    position: relative;
+}
+
+.titleVietnam::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-title-color);
+    border-radius: 10px;
+    width: 3px;
+    height: 25vh;
+    right: 0;
+    top: 0px;
 }
 
 .titlePictures{
@@ -680,4 +709,72 @@ p, .softlogos {
 .card10{
     background: url(img/img10.jpg);
     background-size: cover;
+}
+
+/* GRIDFESTIVAL */
+
+.gridFestival {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 360px 200px 500px;
+    margin: auto 10vw;
+    position: relative;
+    top: 0px;
+    margin-bottom: 100px;
+}
+
+.introFestival{
+    grid-column: span 2;
+    grid-row: 1 / 2;
+}
+
+.titleFestival, .titleNovember, .descriptionDantesk {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.titleFestival{
+    grid-column: 2 / 3;
+    letter-spacing: var(--spacing-2);
+    position: absolute;
+    right: -16px;
+}
+
+.titleNovember {
+    position: absolute;
+    top: 50px;
+    right: -16px;
+    letter-spacing: var(--spacing-2);
+}
+
+.descriptionDantesk {
+    margin-right: 0;
+    position: relative;
+}
+
+.titleFestival::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-title-color);
+    border-radius: 10px;
+    width: 3px;
+    height: 25vh;
+    right: 0px;
+    top: 0px;
+}
+
+.danteskVideo {
+    margin-left: 0;
+}
+.titleStages {
+    grid-column: span 2;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stages {
+    /* grid-column: span 2;
+    grid-row: 4 / 5; */
 }
