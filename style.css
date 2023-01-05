@@ -756,7 +756,6 @@ p, .softlogos {
     margin: auto 10vw;
     position: relative;
     top: 0px;
-    margin-bottom: 100px;
 }
 
 .introFestival{
@@ -810,9 +809,40 @@ p, .softlogos {
     align-items: center;
 }
 
+.stages {
+    width: 20vw;
+}
+
 .stagesAlign {
     grid-column: span 2;
     grid-row: 4 / 5;
     display: flex;
     justify-content: space-between;
 }
+
+footer {
+    position: relative;
+}
+.footMenu {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    -webkit-box-reflect: below;
+    position: relative;
+    top: -50px;
+}
+
+.footMenu li a, .copyright{
+    color: var(--nav-text-color);
+    font-family: var(--nav-font);
+    font-size: var(--nav-text-size);
+}
+
+.copyright {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* RESPONSIVE VERSION MOBILE */
+
