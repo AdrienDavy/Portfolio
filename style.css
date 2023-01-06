@@ -841,6 +841,7 @@ footer {
     position: absolute;
     right: 10px;
     bottom: 10px;
+    font-size: var(--base-size);
 }
 
 /* RESPONSIVE VERSION MOBILE */
