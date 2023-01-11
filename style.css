@@ -116,6 +116,11 @@ p.visible {
 iframe {
     box-shadow: 0px 5px 10px black;
     border-radius: 10px;
+    transition: all 350ms ease;
+}
+
+iframe:hover{
+    box-shadow: 0px 0px 10px #8ec2d6;
 }
 
 /* ANCRES */
@@ -290,7 +295,7 @@ nav {
 
 .works{
     position: relative;
-    top: -800px;
+    top: -80vh;
     left: 80px;
 }
 
@@ -704,12 +709,13 @@ p, .softlogos {
 .card{
     border: 1px solid var(--main-title-color);
     width: 50px;
-    height: 400px;
+    height: 500px;
     min-width: 50px;
-    min-height: 400px;
+    min-height: 500px;
     transition-duration: 0.5s;
     margin: 5px;
     z-index: 1;
+    border-radius: 5px;
 }
 
 .cardX{
@@ -850,9 +856,7 @@ footer {
     justify-content: space-evenly;
     text-decoration: none;
     position: relative;
-    top: -50px;
-    background-color: #0B8ABD;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
 }
 
 .footMenu li a, .copyright{
@@ -867,10 +871,26 @@ footer {
     text-shadow: 0px 0px 10px #fff;
 }
 
+.footMenuLink{
+    display: flex;
+    position: relative;
+}
+
+.footMenuLink span{
+    color: var(--nav-text-color);
+    font-family: var(--nav-font);
+    font-size: var(--nav-text-size);
+    position: absolute;
+    top: 13pt;
+    left: 0;
+    transform: rotateX(180deg);
+    opacity: 0.5;
+}
+
 .copyright {
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: -40px;
     font-size: var(--base-size);
 }
 
@@ -931,8 +951,9 @@ footer {
         right: -15px;
     }
 
-    .socialmedia {
-        right: 0;
+    .socialmedia {        
+        justify-content: center;
+        right: auto;
     }
 
     .videozone {
@@ -941,10 +962,9 @@ footer {
     }
     
     .works {
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        top: auto;
+        left: 25%;
+        right: 25%;
     }
 
     #h1home {
@@ -953,7 +973,7 @@ footer {
     }
 
     #grapher, #dev, #cgi {
-        top: 0;
+        top: -25px;
     }
     
     #profilePicture {
@@ -1100,5 +1120,22 @@ footer {
     .footMenu {
         width: 100vw;
         bottom: 50px;
+    }
+}
+
+/* RESPONSIVE TABLETTE */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    .works{
+        top: -50vh;
+    }
+
+    .socialmedia{
+        right: 5vw;
+    }
+
+    .logo{
+        width: 40px
     }
 }

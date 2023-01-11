@@ -6,7 +6,7 @@ let arrowRight=document.querySelector(".arrowRight");
 let slide=document.querySelector(".slide");
 let indice_element_active=1;
 function augmenter(variable){
-    variable.style="z-index:2;transform:scale(1.2);width:40vw;transition: all 0.5s ease;";
+    variable.style="z-index:2;transform:scale(1.2);width:40vw;transition: all 0.5s ease;margin:50px;";
 }
 function diminuer(variable){
     variable.style="z-index:1;transform:scale(1);";
