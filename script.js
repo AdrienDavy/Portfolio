@@ -28,3 +28,17 @@ arrowRight.addEventListener("click", ()=>{
     indice_element_active=indice_element_active+1;    
     }    
 })
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show',);
+        }
+    });
+});
+
+const hiddenElements = document = document.querySelectorAll('p');
+hiddenElements.forEach((el) => observer.observe(el));

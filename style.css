@@ -99,6 +99,29 @@ h4 {
     font-size: var(--fourth-title-size);
 }
 
+p {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+iframe {
+    box-shadow: 0px 5px 10px black;
+}
+
 /* ANCRES */
 
 
@@ -412,7 +435,7 @@ p, .softlogos {
     grid-template-rows: 150px 300px 150px 300px 300px;
     margin: auto 10vw;
     position: relative;
-    top: -50px;
+    top: -50px;    
 }
 
 .gridaboutme::before {
@@ -829,12 +852,20 @@ footer {
     text-decoration: none;
     position: relative;
     top: -50px;
+    background-color: #0B8ABD;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .footMenu li a, .copyright{
     color: var(--nav-text-color);
     font-family: var(--nav-font);
     font-size: var(--nav-text-size);
+    transition: all 250ms ease;
+}
+
+.footMenu li a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
 }
 
 .copyright {
@@ -909,7 +940,7 @@ footer {
     .works {
         position: absolute;
         width: 100vw;
-        top: -80px;
+        top: 0px;
         left: 30px;
     }
 
@@ -939,12 +970,17 @@ footer {
     }
     
     .gridaboutme .aboutme {
-        left: 100px;
+        left: 75px;
         top: -50px;
+    }
+
+    .one {
+        text-align: justify;
     }
     
     .three {
         padding-right: 0;
+        text-align: justify;
     }
 
     .softlogos {
@@ -976,7 +1012,8 @@ footer {
         position: inherit;
         top: auto;
         margin: auto;
-        letter-spacing: var(--spacing);
+        letter-spacing: 0;
+        left: 0;
     }
 
     .descriptionTemple {
@@ -1002,13 +1039,13 @@ footer {
 
     .titleVietnam {
         right: auto;
-        top: 190px;
+        top: 210px;
     }
 
     .titleMay {
         right: auto;
-        top: 265px;
-        letter-spacing: 8pt;
+        top: 285px;
+        letter-spacing: 0;
     }
 
     .gridtravel iframe {
