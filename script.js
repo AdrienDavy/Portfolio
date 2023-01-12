@@ -1,3 +1,5 @@
+// // CAROUSEL ---------------------------------------------------------
+
 let card=document.querySelectorAll(".card");
 let arrowLeft=document.querySelector(".arrowLeft");
 let arrowRight=document.querySelector(".arrowRight");
@@ -28,3 +30,28 @@ arrowRight.addEventListener("click", ()=>{
     indice_element_active=indice_element_active+1;    
     }    
 })
+
+// ANIMATION P ON SCROLL -----------------------------------------
+
+
+// Récupération des balises p
+const paragraphs = document.querySelectorAll('p');
+
+// Scroll callback function
+const showOnScroll = () => {
+    // Boucle sur les balises p
+    paragraphs.forEach((p, i) => {
+        // Récupération de la position de la balise p par rapport au haut de la page
+        const pPosition = p.getBoundingClientRect().top;
+        // Vérification si la position de la balise p est inférieure à la position de la fenêtre + la hauteur de la fenêtre
+        if (pPosition < window.innerHeight/1.5) {
+            // Ajout de la classe 'visible' pour faire apparaître la balise
+            p.classList.add('visible');
+        }
+    });
+};
+
+// Ajout de l'événement scroll
+window.addEventListener('scroll', showOnScroll);
+// Ajout de l'événement load pour jouer qu'une fois l'animation par chargement de page
+window.addEventListener("load", showOnScroll);
