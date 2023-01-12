@@ -53,4 +53,5 @@ const showOnScroll = () => {
 
 // Ajout de l'événement scroll
 window.addEventListener('scroll', showOnScroll);
+// Ajout de l'événement load pour jouer qu'une fois l'animation par chargement de page
 window.addEventListener("load", showOnScroll);

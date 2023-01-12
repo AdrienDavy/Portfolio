@@ -127,7 +127,7 @@ iframe:hover{
 /* ANCRES */
 
 
-.foxprint, .foxprinttwo, .foxprintthree {
+.foxPrint, .foxPrintTwo, .foxPrintThree {
     mix-blend-mode: difference;
     position: fixed;
     right: 20px;
@@ -136,20 +136,20 @@ iframe:hover{
     z-index: 5;
 }
 
-.foxprint:hover, .foxprinttwo:hover, .foxprintthree:hover {
+.foxPrint:hover, .foxPrintTwo:hover, .foxPrintThree:hover {
     transform: scale(1.1);
 }
 
-.foxprint, .foxprint img, .foxprint a {
+.foxPrint, .foxPrint img, .foxPrint a {
     width: 50px;
     top: 100px;
 }
-.foxprinttwo, .foxprinttwo img, .foxprinttwo a {
+.foxPrintTwo, .foxPrintTwo img, .foxPrintTwo a {
     width: 45px;
     top: 180px;
     transform: rotate(5deg);
 }
-.foxprintthree, .foxprintthree img, .foxprintthree a {
+.foxPrintThree, .foxPrintThree img, .foxPrintThree a {
     width: 40px;
     top: 260px;
 }
@@ -281,7 +281,7 @@ nav {
 
 /* VIDEO BACKGROUND */
 
-.videozone {
+.videoZone {
     display: flex;
     top: -80px;
     position: relative;
@@ -289,7 +289,7 @@ nav {
     z-index: -1;
 }
 
-.videozone video{
+.videoZone video{
     width: 100%;
     box-shadow: 0px 3px 15px 0px black;
 }
@@ -300,7 +300,7 @@ nav {
     left: 80px;
 }
 
-#h1home {
+#h1Home {
     color: var(--main-title-color);
     font-family: var(--main-title-font);
     font-size: var(--main-title-size);
@@ -395,27 +395,27 @@ nav {
     }
 }
 
-.socialmedia {
+.socialMedia {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
     top: -70px;
-    right: 2vw;
+    right: 3vw;
 }
 
-.socialmedia .medialogo a{
+.socialMedia .mediaLogo a{
     margin-left:  var(--spacing-4);
     margin-right:  var(--spacing-4);
 }
-.socialmedia .medialogo a img{
+.socialMedia .mediaLogo a img{
     width: var(--spacing-4);
     height: var(--spacing-4);
     box-shadow: 5px 5px 13px rgba(61, 25, 26, 1);
     transition: all 150ms ease-in-out;
 }
 
-.medialogo a img:hover {
+.mediaLogo a img:hover {
     transform: scale(1.1);
 }
 /* Fin du header */
@@ -423,7 +423,7 @@ nav {
 
 /* Flex Grid About Me */
 
-p, .softlogos {
+p, .softLogos {
     color: var(--main-text-color);
     font-family: var(--main-text-font);
     font-size: var(--main-text-size);
@@ -434,7 +434,7 @@ p, .softlogos {
     flex-wrap: wrap;
 }
 
-.gridaboutme {
+.gridAboutMe {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -442,7 +442,7 @@ p, .softlogos {
     position: relative;
 }
 
-.gridaboutme::before {
+.gridAboutMe::before {
     content: "";
     position: absolute;
     background-color: var(--main-title-color);
@@ -452,7 +452,7 @@ p, .softlogos {
     bottom: 0;
 }
 
-.aboutme {
+.aboutMe {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     position: absolute;
@@ -494,7 +494,7 @@ p, .softlogos {
     padding-right: 50px;
 }
 
-.softlogos {
+.softLogos {
     position: relative;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
@@ -508,7 +508,7 @@ p, .softlogos {
     margin-left: auto;
 }
 
-.softlogos::before {
+.softLogos::before {
     content: "";
     position: absolute;
     background-color: var(--main-title-color);
@@ -525,7 +525,7 @@ p, .softlogos {
 
 /* Flex Grid SOME HIGHLIGHTS PROJECTS */
 
-.gridhighlights {
+.gridHighlights {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -537,7 +537,7 @@ p, .softlogos {
     margin-bottom: 50px;
 }
 
-.gridhighlights::before {
+.gridHighlights::before {
     content: "";
     position: absolute;
     background-color: var(--main-title-color);
@@ -557,7 +557,7 @@ p, .softlogos {
     margin-top: 50px;
 }
 
-.introhighlights {
+.introHighlights {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
@@ -586,7 +586,7 @@ p, .softlogos {
     margin: auto 50px;
 }
 
-.gridhighlights iframe{
+.gridHighlights iframe{
     margin-left: auto;
 }
 
@@ -602,7 +602,7 @@ p, .softlogos {
 
 /* Flex Grid Travel */
 
-.gridtravel {
+.gridTravel {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 360px 200px 800px;
@@ -612,7 +612,7 @@ p, .softlogos {
     margin-bottom: 50px;
 }
 
-.gridtravel::before {
+.gridTravel::before {
     content: "";
     position: absolute;
     background-color: var(--main-title-color);
@@ -622,7 +622,7 @@ p, .softlogos {
     bottom: 0;
 }
 
-.introtravel {
+.introTravel {
     grid-column: span 2;
     grid-row: 1 / 2;
 }
@@ -829,6 +829,7 @@ p, .softlogos {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
+
 .titleStages {
     grid-column: span 2;
     grid-row: 3 / 4;
@@ -898,7 +899,7 @@ footer {
 /* RESPONSIVE VERSION MOBILE */
 
 @media screen and (max-width: 768px) {
-    h1, h2, em, .highlights, .aboutme  {
+    h1, h2, em, .highlights, .aboutMe  {
         font-size: 24pt;
     }
 
@@ -918,7 +919,7 @@ footer {
         margin-top: 50px;
     }
 
-    .foxprint, .foxprinttwo, .foxprintthree, .carousel, .titlePictures, .softlogos::before, .titleTemple::before, .caseDescriptionVietnam::before, .caseDescriptionDantesk::before {
+    .foxPrint, .foxPrintTwo, .foxPrintThree, .carousel, .titlePictures, .softLogos::before, .titleTemple::before, .caseDescriptionVietnam::before, .caseDescriptionDantesk::before {
         display: none;
     }
 
@@ -941,7 +942,7 @@ footer {
     z-index: 4;
     }
 
-    .navlink-container ul, .videozone, .gridaboutme, .gridhighlights, .gridtravel, .gridFestival, .mainhome {
+    .navlink-container ul, .videoZone, .gridAboutMe, .gridHighlights, .gridTravel, .gridFestival, .mainHome {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -952,12 +953,12 @@ footer {
         right: -15px;
     }
 
-    .socialmedia {        
+    .socialMedia {        
         justify-content: center;
         right: auto;
     }
 
-    .videozone {
+    .videoZone {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -970,7 +971,7 @@ footer {
         align-items: center;
     }
 
-    #h1home {
+    #h1Home {
         text-align: justify;
         letter-spacing: normal;
     }
@@ -985,16 +986,16 @@ footer {
         top: -200px;
     }
     
-    .gridaboutme {
+    .gridAboutMe {
         margin-top: 250px;
         position: relative;
     }
 
-    .gridaboutme::before {
+    .gridAboutMe::before {
         bottom: -20px;
     }
     
-    .gridaboutme .aboutme {
+    .gridAboutMe .aboutMe {
         left: 75px;
         top: -50px;
     }
@@ -1008,18 +1009,18 @@ footer {
         text-align: justify;
     }
 
-    .softlogos {
+    .softLogos {
         gap: 30px;        
         width: 100%;
         margin: 20px 0;
     }
 
-    .softlogos img {
+    .softLogos img {
         width: 30px;
         margin: auto;
     }
 
-    .gridhighlights {
+    .gridHighlights {
         position: relative;
         padding-bottom: 0px;
         margin-bottom: 50px;
@@ -1051,22 +1052,22 @@ footer {
         margin: 50px auto;
     }
 
-    .gridhighlights iframe {
+    .gridHighlights iframe {
         width: auto;
         margin-left: 0;
         height: auto;
         margin-top: 20px;
     }
 
-    .gridhighlights::before {
+    .gridHighlights::before {
         bottom: -50px;
     }
     
-    .gridtravel {        
+    .gridTravel {        
         margin-bottom: 0px;
     }
     
-    .gridtravel iframe {
+    .gridTravel iframe {
         width: fit-content;
         height: auto;
         margin: 50px 0;
@@ -1143,7 +1144,7 @@ footer {
         top: -50vh;
     }
 
-    .socialmedia{
+    .socialMedia{
         right: 8vw;
     }
 
@@ -1151,11 +1152,9 @@ footer {
         width: 40px
     }
     
-    .aboutme{
+    .aboutMe{
         left: 0px;
-    }
-
-   
+    }   
 
     .descriptionTemple{
         margin: auto 20px;
@@ -1164,16 +1163,5 @@ footer {
     .caseDescriptionVietnam::before{
         right: 0;
     }
-
-    .card{
-        border: 1px solid var(--main-title-color);
-        width: 50px;
-        height: 500px;
-        min-width: 50px;
-        min-height: 500px;
-        transition-duration: 0.5s;
-        margin: 5px;
-        z-index: 1;
-        border-radius: 5px;
-    }
+    
 }
