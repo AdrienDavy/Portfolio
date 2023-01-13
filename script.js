@@ -6,7 +6,7 @@ let arrowRight=document.querySelector(".arrowRight");
 let slide=document.querySelector(".slide");
 let indice_element_active=1;
 function augmenter(variable){
-    variable.style="z-index:2;transform:scale(1.2);width:40vw;transition: all 0.5s ease;";
+    variable.style="z-index:2;transform:scale(1.2);width:100%;transition: all 0.5s ease;";
 }
 function diminuer(variable){
     variable.style="z-index:1;transform:scale(1);";
@@ -44,7 +44,7 @@ const showOnScroll = () => {
         // Récupération de la position de la balise p par rapport au haut de la page
         const pPosition = p.getBoundingClientRect().top;
         // Vérification si la position de la balise p est inférieure à la position de la fenêtre + la hauteur de la fenêtre
-        if (pPosition < window.innerHeight/1.5) {
+        if (pPosition < window.innerHeight/1.3) {
             // Ajout de la classe 'visible' pour faire apparaître la balise
             p.classList.add('visible');
         }
