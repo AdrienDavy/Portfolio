@@ -640,7 +640,7 @@ p,
 .gridTravel {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 360px 200px 800px;
+    grid-template-rows: 200px 400px 50px 1fr;
     margin: auto 10vw;
     position: relative;
     top: 0px;
@@ -666,7 +666,6 @@ p,
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 20px;
 }
 
 .titleVietnam,
@@ -678,6 +677,7 @@ p,
 
 .titleVietnam {
     letter-spacing: var(--spacing-2);
+    
 }
 
 .titleMay {
@@ -721,6 +721,7 @@ p,
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
+    margin: auto 90px;
 }
 
 .carousel {
@@ -741,7 +742,7 @@ p,
 
 .arrowRight,
 .arrowLeft {
-    width: 40px;
+    width: 30px;
     transition: all 250ms ease;
     box-shadow: 5px 5px 15px 0px black;
     border-radius: 10px;
@@ -750,18 +751,21 @@ p,
 .arrowRight:hover,
 .arrowLeft:hover {
     transform: scale(1.1);
+    box-shadow: 0px 0px 10px #8EC2D6;
+    cursor: pointer;
 }
 
 .card {
     border: 1px solid var(--main-title-color);
     width: 50px;
     height: 500px;
-    min-width: 50px;
+    min-width: 0px;
     min-height: 500px;
     transition-duration: 0.5s;
-    margin: 5px;
+    margin: 2px;
     z-index: 1;
     border-radius: 5px;
+    margin-left: 15px;
 }
 
 .cardX {
@@ -1017,6 +1021,14 @@ footer {
         right: -15px;
     }
 
+    .menu {
+        margin-top: 30px;
+    }
+
+    .menu li{
+        height: 50px;
+    }
+
     .socialMedia {
         justify-content: center;
         right: auto;
@@ -1229,8 +1241,16 @@ footer {
         margin: auto 20px;
     }
 
-    .caseDescriptionVietnam::before {
-        right: 0;
+    .descriptionVietnam {
+        margin: 50px 20px;
+    }
+
+    .gridTravel{
+        grid-template-rows: 300px 600px 50px 1fr;
+    }
+
+    .carousel, .titlePictures{
+        display: none;
     }
 
 }
