@@ -736,30 +736,6 @@ p,
     cursor: pointer;
 }
 
-/* 
-#grid::-webkit-scrollbar {
-background-color: #dedede;
-width: 10px;
-}
-
-#grid::-webkit-scrollbar-thumb {
-background-color: #757575;
-} */
-/* 
-.grid-item {
-overflow: hidden;
-cursor: pointer;
-transition: all 0.2s ease;
-}   */
-/* 
-.imgCarousel {
-    min-width: 0;
-    flex: 1 1 100px;
-    object-fit: cover;
-    opacity: 0.5;
-    transition: 0.5s;
-}  */
-
 .grid-item:hover {
     flex: 1 1 20vw;
     opacity: 1;
