@@ -1,36 +1,23 @@
-// // CAROUSEL ---------------------------------------------------------
+let allGridItems = [...document.getElementsByClassName("grid-item")];
+let popupBg = document.getElementById("popup-bg");
+let popupImg = document.getElementById("popup-img");
 
-let card=document.querySelectorAll(".card");
-let arrowLeft=document.querySelector(".arrowLeft");
-let arrowRight=document.querySelector(".arrowRight");
-let slide=document.querySelector(".slide");
-let indice_element_active=1;
-function augmenter(variable){
-    variable.style="z-index:2;transform:scale(1.2);width:100%;transition: all 0.5s ease;";
-}
-function diminuer(variable){
-    variable.style="z-index:1;transform:scale(1);";
-}
-window.onload=()=>{
-    augmenter(card[indice_element_active])
-}
-arrowLeft.addEventListener("click", ()=>{
-    if(indice_element_active !=1) {
-        diminuer(card[indice_element_active]);
-    augmenter(card[indice_element_active-1]);
-    slide.scrollTo(-50 * slide.innerWidth / 100,0);
-    indice_element_active=indice_element_active-1;
-    }    
-})
-arrowRight.addEventListener("click", ()=>{
-    if(indice_element_active !=10) {
-        diminuer(card[indice_element_active]);
-    augmenter(card[indice_element_active+1]);
-    slide.scrollTo(50 * slide.innerWidth / 100,0);
-    indice_element_active=indice_element_active+1;    
-    }    
-})
+const openPopup = (e) => {
+  let gridItemClicked = e.target.closest(".grid-item");
+  let clickedImageName = gridItemClicked.id;
+  popupBg.classList.add("active");
+  popupImg.src = `./img/${clickedImageName}.jpg`;
+  popupImg.style.filter = 'blur(0)';
+};
 
+const closePopup = () => {
+  popupBg.classList.remove("active");
+};
+
+allGridItems.forEach((el) => el.addEventListener("click", openPopup));
+
+popupImg.addEventListener("click", (e) => e.stopPropagation());
+popupBg.addEventListener("click", closePopup);
 // ANIMATION P ON SCROLL -----------------------------------------
 
 
@@ -39,16 +26,16 @@ const paragraphs = document.querySelectorAll('p');
 
 // Scroll callback function
 const showOnScroll = () => {
-    // Boucle sur les balises p
-    paragraphs.forEach((p, i) => {
-        // Récupération de la position de la balise p par rapport au haut de la page
-        const pPosition = p.getBoundingClientRect().top;
-        // Vérification si la position de la balise p est inférieure à la position de la fenêtre + la hauteur de la fenêtre
-        if (pPosition < window.innerHeight/1.3) {
-            // Ajout de la classe 'visible' pour faire apparaître la balise
-            p.classList.add('visible');
-        }
-    });
+  // Boucle sur les balises p
+  paragraphs.forEach((p, i) => {
+    // Récupération de la position de la balise p par rapport au haut de la page
+    const pPosition = p.getBoundingClientRect().top;
+    // Vérification si la position de la balise p est inférieure à la position de la fenêtre + la hauteur de la fenêtre
+    if (pPosition < window.innerHeight / 1.3) {
+      // Ajout de la classe 'visible' pour faire apparaître la balise
+      p.classList.add('visible');
+    }
+  });
 };
 
 // Ajout de l'événement scroll
