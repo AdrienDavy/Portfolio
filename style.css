@@ -22,7 +22,7 @@
     font-family: 'cooper_hewittthin';
     src: url('/font/cooperhewitt-thin-webfont.woff2') format('woff2'),
         url('/font/cooperhewitt-thin-webfont.woff') format('woff');
-    font-weight: lighter;
+    font-weight: light;
     font-style: normal;
 
 }
@@ -118,6 +118,7 @@ iframe {
     border-radius: 10px;
     transition: all 350ms ease;
     width: 100%;
+    border: 0;
 }
 
 iframe:hover {
@@ -187,6 +188,7 @@ nav {
     margin-left: 20px;
     z-index: 4;
 }
+
 
 .navlink-container {
     display: flex;
@@ -640,7 +642,7 @@ p,
 .gridTravel {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 400px 50px 1fr;
+    grid-template-rows: 200px 400px 100px 1fr;
     margin: auto 10vw;
     position: relative;
     top: 0px;
@@ -654,7 +656,7 @@ p,
     border-radius: 10px;
     width: 80vw;
     height: 3px;
-    bottom: 0;
+    bottom: -100px;
 }
 
 .introTravel {
@@ -677,7 +679,7 @@ p,
 
 .titleVietnam {
     letter-spacing: var(--spacing-2);
-    
+
 }
 
 .titleMay {
@@ -701,7 +703,6 @@ p,
     border-radius: 10px;
     width: 3px;
     height: 25vh;
-    right: 0;
 }
 
 .titlePictures {
@@ -709,120 +710,108 @@ p,
     grid-row: 3 / 4;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 /* CAROUSEL */
 
-.slide {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    width: 100%;
-    display: flex;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    margin: auto 90px;
-}
-
-.carousel {
-    width: 80vw;
-    min-width: 80vw;
-    display: flex;
-    margin: auto;
+#grid {
     grid-column: span 2;
     grid-row: 4 / 5;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    height: auto;
 }
 
-
-::-webkit-scrollbar {
-    display: none;
+.grid-item img {
+    width: 30vw;
 }
 
-.arrowRight,
-.arrowLeft {
-    width: 30px;
-    transition: all 250ms ease;
-    box-shadow: 5px 5px 15px 0px black;
-    border-radius: 10px;
-}
-
-.arrowRight:hover,
-.arrowLeft:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px #8EC2D6;
+.grid-item {
+    min-width: 2vw;
+    flex: 1 1 0px;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.card {
-    border: 1px solid var(--main-title-color);
-    width: 50px;
-    height: 500px;
-    min-width: 0px;
-    min-height: 500px;
-    transition-duration: 0.5s;
-    margin: 2px;
-    z-index: 1;
-    border-radius: 5px;
-    margin-left: 15px;
+/* 
+#grid::-webkit-scrollbar {
+background-color: #dedede;
+width: 10px;
 }
 
-.cardX {
-    background: url(img/mylogo.png) no-repeat center center var(--main-title-color);
-    background-size: contain;
+#grid::-webkit-scrollbar-thumb {
+background-color: #757575;
+} */
+/* 
+.grid-item {
+overflow: hidden;
+cursor: pointer;
+transition: all 0.2s ease;
+}   */
+/* 
+.imgCarousel {
+    min-width: 0;
+    flex: 1 1 100px;
+    object-fit: cover;
     opacity: 0.5;
-    filter: blur(0.8px);
+    transition: 0.5s;
+}  */
+
+.grid-item:hover {
+    flex: 1 1 20vw;
+    opacity: 1;
+    box-shadow: 0 0 10px #8ec2d6;
+    background-color: #8EC2D6;
+    z-index: 2;
+    height: auto;
+    border-radius: 0 0 5px 5px;
 }
 
-.card1 {
-    background: url(img/img1.jpg);
-    background-size: cover;
+#popup-content {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(10vw);
+    background-color: #0B8ABD;
 }
 
-.card2 {
-    background: url(img/img2.jpg);
-    background-size: cover;
+#popup-bg {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.card3 {
-    background: url(img/img3.jpg);
-    background-size: cover;
+#popup-bg.active {
+    display: contents;
 }
 
-.card4 {
-    background: url(img/img4.jpg);
-    background-size: cover;
+#popup-img {
+    width: 60vw;
+    height: auto;
+    position: relative;
 }
 
-.card5 {
-    background: url(img/img5.jpg);
-    background-size: cover;
+#popup-close {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    /* transform: translateX(10vw); */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.2s ease;
 }
 
-.card6 {
-    background: url(img/img6.jpg);
-    background-size: cover;
-}
-
-.card7 {
-    background: url(img/img7.jpg);
-    background-size: cover;
-}
-
-.card8 {
-    background: url(img/img8.jpg);
-    background-size: cover;
-}
-
-.card9 {
-    background: url(img/img9.jpg);
-    background-size: cover;
-}
-
-.card10 {
-    background: url(img/img10.jpg);
-    background-size: cover;
+#popup-close:hover {
+    background-color: orange;
 }
 
 /* GRIDFESTIVAL */
@@ -1025,7 +1014,7 @@ footer {
         margin-top: 30px;
     }
 
-    .menu li{
+    .menu li {
         height: 50px;
     }
 
@@ -1245,12 +1234,7 @@ footer {
         margin: 50px 20px;
     }
 
-    .gridTravel{
+    .gridTravel {
         grid-template-rows: 300px 600px 50px 1fr;
     }
-
-    .carousel, .titlePictures{
-        display: none;
-    }
-
 }

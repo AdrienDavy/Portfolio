@@ -15,7 +15,7 @@
     <header>
         <nav>
             <div class="logo-container">
-                <a href="#">
+                <a href="index.html">
                     <img src="img/mylogo.png" alt="logo" title="Logo Adrien Davy" class="nav-logo" id="nav-logo">
                 </a>
             </div>
@@ -24,20 +24,19 @@
                 <div class="burger-menu"></div>
                 <ul class="menu">
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">CGI</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="cgi.html">CGI</a></li>
+                    <li><a href="videos.html">VIDEOS</a></li>
                 </ul>
             </div>
         </nav>
         <div class="foxPrint"><a href="#nav-logo"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="Top page"></a></div>
-        <div class="foxPrintTwo"><a href="#aboutme"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="About me"></a></div>
+        <div class="foxPrintTwo"><a href="#aboutMe"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="About me"></a></div>
         <div class="foxPrintThree"><a href="#highlights"><img src="/img/fox_footprint.png" alt="A fox's footprint" title="Highlights Projects"></a></div>
         
        
         
         <div class="videoZone">
-            <video src="img/thunder_wizard_format_web.mp4" alt="Apocalyptic street" id="bgNav" autoplay muted></video>
+            <video src="img/thunder_wizard_format_web.mp4" id="bgNav" autoplay muted></video>
         </div>
             <div class="works">
                 <h1 id="h1Home"><strong>ADRIEN DAVY | PORTFOLIO</strong></h1>
@@ -115,11 +114,7 @@
             </p>
             </div>
 
-            <iframe width="640" height="360" src="http://www.youtube.com/embed/Ducj6Y-B7nM?autoplay=1" frameborder="0">
-                <p>
-                    Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                        href="http://www.youtube.com/embed/Ducj6Y-B7nM?autoplay=1">visualiser la vidéo</a>.
-                </p>
+            <iframe width="640" height="360" src="http://www.youtube.com/embed/Ducj6Y-B7nM?autoplay=1">                
             </iframe>
         </section>
 
@@ -138,33 +133,52 @@
                     ONE MONTH IN THE NORTH OF THE COUNTRY.
                 </p>
             </div>
-            <iframe width="640" height="360" src="http://www.youtube.com/embed/TcGwQQMH4qw?autoplay=1" frameborder="0"
+            <iframe width="640" height="360" src="http://www.youtube.com/embed/TcGwQQMH4qw?autoplay=1"
                 class="videoVietnam">
-                <p>
-                    Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                        href="http://www.youtube.com/embed/TcGwQQMH4qw?autoplay=1">visualiser la vidéo</a>.
-                </p>
             </iframe>
 
             <h3 class="titlePictures">SOME PICTURES</h3>
 
-            <div class="carousel">
-                <img src="img/arrowLeft.png" alt="arrow" class="arrowLeft">
-                <div class="slide">
-                    <div class="card cardX"></div>
-                    <div class="card card1"></div>
-                    <div class="card card2"></div>
-                    <div class="card card3"></div>
-                    <div class="card card4"></div>
-                    <div class="card card5"></div>
-                    <div class="card card6"></div>
-                    <div class="card card7"></div>
-                    <div class="card card8"></div>
-                    <div class="card card9"></div>
-                    <div class="card card10"></div>
-                    <div class="card cardX"></div>
+            <div id="popup-bg">
+                <div id="popup-content">
+                  <div id="popup-close">
+                    <ion-icon name="close-circle"></ion-icon>
+                  </div>
+                  <img id="popup-img" src="#" alt="" />
                 </div>
-                <img src="img/arrowRight.png" alt="arrow" class="arrowRight">
+              </div>
+              <div id="grid">
+                    <div class="grid-item" id="img1">
+                        <img src="img/img1.jpg" alt="Hanoi rail street" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img2">
+                        <img src="img/img2.jpg" alt="Sunset landscape" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img3">
+                        <img src="img/img3.jpg" alt="Boats on a river" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img4">
+                        <img src="img/img4.jpg" alt="Sapa Street" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img5">
+                        <img src="img/img5.jpg" alt="Boat on a lake" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img6">
+                        <img src="img/img6.jpg" alt="A village on water" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img7">
+                        <img src="img/img7.jpg" alt="Two puppies" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img8">
+                        <img src="img/img8.jpg" alt="A dragon fruit" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img9">
+                        <img src="img/img9.jpg" alt="Landscape with mountains" class="imgCarousel">
+                    </div>
+                    <div class="grid-item" id="img10">
+                        <img src="img/img10.jpg" alt="A temple on water" class="imgCarousel">
+                    </div>
+                </div>                
             </div>
         </section>
 
@@ -183,32 +197,17 @@
                 </p>
             </div>
 
-            <iframe width="640" height="360" src="http://www.youtube.com/embed/8rWluVbIlKA?autoplay=1" frameborder="0" class="danteskVideo">
-                <p>
-                    Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                        href="http://www.youtube.com/embed/8rWluVbIlKA?autoplay=1">visualiser la vidéo</a>.
-                </p>
+            <iframe width="640" height="360" src="http://www.youtube.com/embed/8rWluVbIlKA?autoplay=1" class="danteskVideo">                
             </iframe>
 
             <h3 class="titleStages">3 STAGES AMONG DANTESK FESTIVAL</h3>
                 <div class="stagesAlign">
-                    <iframe width="320" height="360" src="http://www.youtube.com/embed/JGTNbPLy20Q?autoplay=1" frameborder="0" class="stages">
-                        <p>
-                            Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                                href="http://www.youtube.com/embed/JGTNbPLy20Q?autoplay=1">visualiser la vidéo</a>.
-                        </p>
+                    <iframe width="320" height="360" src="http://www.youtube.com/embed/JGTNbPLy20Q?autoplay=1" class="stages">                        
                     </iframe>
-                    <iframe width="320" height="360" src="http://www.youtube.com/embed/zc4horyDeU0?autoplay=1" frameborder="0" class="stages">
-                        <p>
-                            Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                                href="http://www.youtube.com/embed/zc4horyDeU0?autoplay=1">visualiser la vidéo</a>.
-                        </p>
+                    <iframe width="320" height="360" src="http://www.youtube.com/embed/zc4horyDeU0?autoplay=1" class="stages">                        
                     </iframe>
-                    <iframe width="320" height="360" src="http://www.youtube.com/embed/sBK4hw3Ivjk?autoplay=1" frameborder="0" class="stages">
-                        <p>
-                            Votre navigateur ne prend pas en charge les iframes. Vous pouvez visiter la page pour <a
-                                href="http://www.youtube.com/embed/sBK4hw3Ivjk?autoplay=1">visualiser la vidéo</a>.
-                        </p>
+                    <iframe
+                    width="320" height="360" src="http://www.youtube.com/embed/sBK4hw3Ivjk?autoplay=1" class="stages">                        
                     </iframe>
                 </div>
         </section>
@@ -216,14 +215,22 @@
         <footer class="footNav">
             <ul class="footMenu">
                 <li class="footMenuLink"><a href="#">Home</a><span>Home</span></li>
-                <li class="footMenuLink"><a href="#">CGI</a><span>CGI</span></li>
-                <li class="footMenuLink"><a href="#">Videos</a><span>Videos</span></li>
-                <li class="footMenuLink"><a href="#">Contact</a><span>Contact</span></li>
+                <li class="footMenuLink"><a href="cgi.html">CGI</a><span>CGI</span></li>
+                <li class="footMenuLink"><a href="videos.html">Videos</a><span>Videos</span></li>
+                
             </ul>            
             <div class="copyright">COPYRIGHT© ADRIEN DAVY 2023</div>
         </footer>
     </main>
     <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 </body>
 
 </html>
