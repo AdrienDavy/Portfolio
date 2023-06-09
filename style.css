@@ -175,9 +175,9 @@ nav {
     width: 100%;
     height: 80px;
     display: flex;
-    background-color: var(--nav-color);
     justify-content: space-between;
     align-items: center;
+    background-color: var(--nav-color);
     transition: all 1s cubic-bezier(0.42, 0, 0.14, 1.01);
 }
 
@@ -194,6 +194,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 .menu {
@@ -203,7 +204,7 @@ nav {
     width: 80vw;
     z-index: 1;
     position: relative;
-    right: -95vw;
+    right: -100vw;
     transition: all 1.5s cubic-bezier(0.42, 0, 0.14, 1.01);
     mix-blend-mode: difference;
 }
@@ -307,19 +308,23 @@ nav {
 .videoZone video {
     width: 100%;
     box-shadow: 0px 3px 15px 0px black;
+    position: relative;
 }
 
 .works {
-    position: relative;
-    top: -80vh;
+    position: absolute;
+    top: 40vh;
     left: 80px;
+    z-index: 10;
+    width: 80%;
+    height: fit-content;
 }
 
 #h1Home {
     color: var(--main-title-color);
     font-family: var(--main-title-font);
     font-size: var(--main-title-size);
-    position: absolute;
+
     letter-spacing: 10px;
 }
 
@@ -330,8 +335,9 @@ nav {
     font-family: var(--secondary-title-font);
     font-size: var(--secondary-title-size);
     position: absolute;
-    text-shadow: 2px 2px 10px black;
     top: 20px;
+    text-shadow: 2px 2px 10px black;
+
 }
 
 #grapher {
@@ -921,13 +927,7 @@ footer {
         font-size: 24pt;
     }
 
-    body {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        margin: auto;
-    }
+
 
     h3,
     p {
@@ -950,23 +950,42 @@ footer {
         display: none;
     }
 
+    #grid {
+        display: none;
+    }
+
     aside {
         margin: auto;
     }
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
+        position: absolute;
+        overflow: hidden;
+        height: 500px;
     }
 
-    .nav-logo {
-        display: block;
-        height: 80px;
-        margin-top: 0px;
-        margin-left: 0px;
-        z-index: 4;
+    .menu {
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .logo-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: -1vh;
+    }
+
+    .navlink-container {
+        width: 100%;
+        height: 20vh;
     }
 
     .navlink-container ul,
@@ -982,16 +1001,13 @@ footer {
         flex-direction: column;
     }
 
-    .navlink-container input:checked~.menu {
-        right: -15px;
+    .mainHome {
+        width: 90vw;
     }
 
-    .menu {
-        margin-top: 30px;
-    }
+    .gridTravel::before {
 
-    .menu li {
-        height: 50px;
+        bottom: 0;
     }
 
     .socialMedia {
@@ -1006,10 +1022,12 @@ footer {
     }
 
     .works {
-        top: auto;
+        top: 20vh;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        left: 0;
+        width: 100%;
     }
 
     #h1Home {
@@ -1021,26 +1039,37 @@ footer {
     #dev,
     #cgi {
         top: -25px;
+        text-align: center;
+    }
+
+    .my-picture {
+        width: 100vw;
+        height: 200px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #profilePicture {
-        width: 360px;
+        width: 100%;
         position: absolute;
-        top: -200px;
     }
 
     .gridAboutMe {
-        margin-top: 250px;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .gridAboutMe::before {
         bottom: -20px;
     }
 
-    .gridAboutMe .aboutMe {
-        left: 75px;
-        top: -50px;
+    .aboutMe {
+        width: auto;
     }
 
     .one {
@@ -1187,8 +1216,14 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
     .works {
-        top: -50vh;
+        top: 20vh;
     }
+
+    .menu {
+        overflow: hidden;
+    }
+
+
 
     .socialMedia {
         right: 8vw;
