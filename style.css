@@ -316,7 +316,7 @@ nav {
     top: 40vh;
     left: 80px;
     z-index: 10;
-    width: 40vw;
+    width: 80%;
     height: fit-content;
 }
 
@@ -1012,10 +1012,12 @@ footer {
     }
 
     .works {
-        top: auto;
+        top: 20vh;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        left: 0;
+        width: 100%;
     }
 
     #h1Home {
@@ -1027,6 +1029,7 @@ footer {
     #dev,
     #cgi {
         top: -25px;
+        text-align: center;
     }
 
     #profilePicture {
@@ -1193,7 +1196,10 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
 
     .works {
-        top: -50vh;
+
+        top: 20vh;
+
+
     }
 
     .socialMedia {
