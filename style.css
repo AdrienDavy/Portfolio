@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'cooper_hewittbold';
-    src: url('/font/cooperhewitt-bold-webfont.woff2') format('woff2'),
-        url('/font/cooperhewitt-bold-webfont.woff') format('woff');
+    src: url('font/cooperhewitt-bold-webfont.woff2') format('woff2'),
+        url('font/cooperhewitt-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: 'cooper_hewittlight';
-    src: url('/font/cooperhewitt-light-webfont.woff2') format('woff2'),
-        url('/font/cooperhewitt-light-webfont.woff') format('woff');
+    src: url('font/cooperhewitt-light-webfont.woff2') format('woff2'),
+        url('font/cooperhewitt-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: 'cooper_hewittthin';
-    src: url('/font/cooperhewitt-thin-webfont.woff2') format('woff2'),
-        url('/font/cooperhewitt-thin-webfont.woff') format('woff');
+    src: url('font/cooperhewitt-thin-webfont.woff2') format('woff2'),
+        url('font/cooperhewitt-thin-webfont.woff') format('woff');
     font-weight: light;
     font-style: normal;
 
