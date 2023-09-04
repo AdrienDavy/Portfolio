@@ -927,7 +927,9 @@ footer {
         font-size: 24pt;
     }
 
-
+    .menu li {
+        padding: 3px 0;
+    }
 
     h3,
     p {
@@ -1001,8 +1003,13 @@ footer {
         flex-direction: column;
     }
 
+    .videoZone {
+        top: 0;
+    }
+
     .mainHome {
         width: 90vw;
+        margin: auto;
     }
 
     .gridTravel::before {
@@ -1044,7 +1051,6 @@ footer {
 
     .my-picture {
         width: 100vw;
-        height: 200px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -1053,199 +1059,213 @@ footer {
 
     #profilePicture {
         width: 100%;
-        position: absolute;
-    }
-
-    .gridAboutMe {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .gridAboutMe::before {
-        bottom: -20px;
-    }
-
-    .aboutMe {
-        width: auto;
-    }
-
-    .one {
-        text-align: justify;
-    }
-
-    .three {
-        padding-right: 0;
-        text-align: justify;
-    }
-
-    .softLogos {
-        gap: 30px;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .softLogos img {
-        width: 30px;
         margin: auto;
     }
-
-    .gridHighlights {
-        position: relative;
-        padding-bottom: 0px;
-        margin-bottom: 50px;
-    }
-
-    .highlights {
-        text-align: center;
-    }
-
-    .caseDescriptionTemple {
-        margin-left: 0;
-    }
-
-    .titleTemple {
-        letter-spacing: 0px;
-        text-align: center;
-    }
-
-    .titleApril {
-        position: inherit;
-        top: auto;
-        margin: auto;
-        letter-spacing: 0;
-        left: 0;
-    }
-
-    .descriptionTemple {
-        text-align: justify;
-        margin: 50px auto;
-    }
-
-    .gridHighlights iframe {
-        width: auto;
-        margin-left: 0;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .gridHighlights::before {
-        bottom: -50px;
-    }
-
-    .gridTravel {
-        margin-bottom: 0px;
-    }
-
-    .gridTravel iframe {
-        width: fit-content;
-        height: auto;
-        margin: 50px 0;
-    }
-
-    .caseDescriptionVietnam {
-        margin-right: 0;
-        align-items: center;
-    }
-
-    .caseDescriptionDantesk {
-        margin-left: 0;
-        align-items: center;
-    }
-
-    .descriptionDantesk {
-        margin: 50px 0;
-    }
-
-    .titleVietnam,
-    .titleMay {
-        letter-spacing: 0;
-    }
-
-    .descriptionVietnam {
-        margin: 20px 0;
-    }
-
-    .titleFestival {
-        position: inherit;
-        letter-spacing: normal;
-        right: auto;
-    }
-
-    .titleNovember {
-        position: inherit;
-        letter-spacing: normal;
-        right: auto;
-        top: auto;
-    }
-
-    .descriptionDantesk {
-        margin-right: auto;
-    }
-
-    .danteskVideo {
-        width: auto;
-        margin-left: 0;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .stagesAlign {
-        flex-direction: column;
-        margin-bottom: 50px;
-    }
-
-    .stages {
-        width: auto;
-        margin-left: 0;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .footMenu {
-        width: 100vw;
-        bottom: 0px;
-        margin-bottom: 0;
-    }
-}
-
-/* RESPONSIVE VERSION TABLETTE */
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-
-    .works {
-        top: 20vh;
-    }
-
-    .menu {
-        overflow: hidden;
-    }
-
-
 
     .socialMedia {
-        right: 8vw;
+        top: -60px;
     }
 
-    .logo {
-        width: 40px
+    .socialMedia .mediaLogo a img {
+        width: 23px;
+        margin-top: 72px;
+        height: auto;
     }
 
-    .aboutMe {
-        left: 0px;
+    .socialMedia .mediaLogo a img {
+
+        .gridAboutMe {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .gridAboutMe::before {
+            bottom: -20px;
+        }
+
+        .aboutMe {
+            width: auto;
+            position: unset;
+        }
+
+        .one {
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .three {
+            padding-right: 0;
+            text-align: justify;
+        }
+
+        .softLogos {
+            gap: 30px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .softLogos img {
+            width: 30px;
+            margin: auto;
+        }
+
+        .gridHighlights {
+            position: relative;
+            padding-bottom: 0px;
+            margin-bottom: 50px;
+        }
+
+        .highlights {
+            text-align: center;
+        }
+
+        .caseDescriptionTemple {
+            margin-left: 0;
+        }
+
+        .titleTemple {
+            letter-spacing: 0px;
+            text-align: center;
+        }
+
+        .titleApril {
+            position: inherit;
+            top: auto;
+            margin: auto;
+            letter-spacing: 0;
+            left: 0;
+        }
+
+        .descriptionTemple {
+            text-align: justify;
+            margin: 50px auto;
+        }
+
+        .gridHighlights iframe {
+            width: auto;
+            margin-left: 0;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .gridHighlights::before {
+            bottom: -50px;
+        }
+
+        .gridTravel {
+            margin-bottom: 0px;
+        }
+
+        .gridTravel iframe {
+            width: fit-content;
+            height: auto;
+            margin: 50px 0;
+        }
+
+        .caseDescriptionVietnam {
+            margin-right: 0;
+            align-items: center;
+        }
+
+        .caseDescriptionDantesk {
+            margin-left: 0;
+            align-items: center;
+        }
+
+        .descriptionDantesk {
+            margin: 50px 0;
+        }
+
+        .titleVietnam,
+        .titleMay {
+            letter-spacing: 0;
+        }
+
+        .descriptionVietnam {
+            margin: 20px 0;
+        }
+
+        .titleFestival {
+            position: inherit;
+            letter-spacing: normal;
+            right: auto;
+        }
+
+        .titleNovember {
+            position: inherit;
+            letter-spacing: normal;
+            right: auto;
+            top: auto;
+        }
+
+        .descriptionDantesk {
+            margin-right: auto;
+        }
+
+        .danteskVideo {
+            width: auto;
+            margin-left: 0;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .stagesAlign {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        .stages {
+            width: auto;
+            margin-left: 0;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .footMenu {
+            width: 100vw;
+            bottom: 0px;
+            margin-bottom: 0;
+        }
     }
 
-    .descriptionTemple {
-        margin: auto 20px;
-    }
+    /* RESPONSIVE VERSION TABLETTE */
 
-    .descriptionVietnam {
-        margin: 50px 20px;
-    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
 
-    .gridTravel {
-        grid-template-rows: 300px 600px 50px 1fr;
+        .works {
+            top: 20vh;
+        }
+
+        .menu {
+            overflow: hidden;
+        }
+
+
+
+        .socialMedia {
+            right: 8vw;
+        }
+
+        .logo {
+            width: 40px
+        }
+
+        .aboutMe {
+            left: 0px;
+        }
+
+        .descriptionTemple {
+            margin: auto 20px;
+        }
+
+        .descriptionVietnam {
+            margin: 50px 20px;
+        }
+
+        .gridTravel {
+            grid-template-rows: 300px 600px 50px 1fr;
+        }
     }
-}
